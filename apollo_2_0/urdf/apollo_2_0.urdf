@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="apollo_2_0">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000251634559923452 -0.00489161046227445 0.176189848701967"
+        rpy="0 0 0" />
+      <mass
+        value="5.39183386142453" />
+      <inertia
+        ixx="0.0653015701694035"
+        ixy="-8.64253723115378E-06"
+        ixz="-6.51180990379735E-06"
+        iyy="0.0942320250294485"
+        iyz="0.000637337135491754"
+        izz="0.149833933937034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="0.00126496874699064 4.06522492759047E-05 -1.13591736248461E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.909836388239155" />
+      <inertia
+        ixx="0.00274407833875377"
+        ixy="2.25881499386519E-07"
+        ixz="-5.42429356552384E-09"
+        iyy="0.00146592296633533"
+        iyz="2.8800515088264E-11"
+        izz="0.00146592879898653" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rw"
+    type="continuous">
+    <origin
+      xyz="-0.1915 0 0.084999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.00126496985318234 -4.06511032513012E-05 -1.13612112264821E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.909836337893845" />
+      <inertia
+        ixx="0.0027440782430291"
+        ixy="2.25879298478987E-07"
+        ixz="5.42818709832004E-09"
+        iyy="0.00146592289358935"
+        iyz="-6.96161465323051E-11"
+        izz="0.0014659287755659" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lw"
+    type="continuous">
+    <origin
+      xyz="0.1915 0 0.084999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="front_wheel">
+    <inertial>
+      <origin
+        xyz="-4.72988234130956E-18 2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0966099959149694" />
+      <inertia
+        ixx="4.8508259037204E-05"
+        ixy="-4.09399257839579E-22"
+        ixz="1.3733482210909E-22"
+        iyy="3.16338885532163E-05"
+        iyz="4.37633689414722E-22"
+        izz="3.16338885532163E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fw"
+    type="continuous">
+    <origin
+      xyz="0 -0.19 0.04179"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="castor_wheel_1">
+    <inertial>
+      <origin
+        xyz="0.000420363773674909 -0.00908122961024421 -0.034311189949967"
+        rpy="0 0 0" />
+      <mass
+        value="0.0540669980927754" />
+      <inertia
+        ixx="1.78511368330048E-05"
+        ixy="-2.00632174983049E-09"
+        ixz="1.11396792287673E-09"
+        iyy="3.91611994966722E-05"
+        iyz="-1.46337604915237E-06"
+        izz="4.11536949075926E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel1top"
+    type="continuous">
+    <origin
+      xyz="0.126 -0.129 0.08824"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_wheel_1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="castor_wheel_1_wheel">
+    <inertial>
+      <origin
+        xyz="-1.35554900637658E-11 -3.58349909079791E-07 -2.10336712023335E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.151688158407235" />
+      <inertia
+        ixx="7.27266749297572E-05"
+        ixy="1.85681267293845E-12"
+        ixz="-3.08329322182269E-10"
+        iyy="4.52531429305757E-05"
+        iyz="-2.57653716208225E-10"
+        izz="4.52956309660314E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_1_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_1_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel1wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.0215 -0.05365"
+      rpy="0 0 0" />
+    <parent
+      link="castor_wheel_1" />
+    <child
+      link="castor_wheel_1_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="castor_wheel_2">
+    <inertial>
+      <origin
+        xyz="0.000420363773674826 -0.00908122961024424 -0.0343111899499671"
+        rpy="0 0 0" />
+      <mass
+        value="0.0540669980927752" />
+      <inertia
+        ixx="1.78511368330048E-05"
+        ixy="-2.00632174983419E-09"
+        ixz="1.11396792290523E-09"
+        iyy="3.91611994966721E-05"
+        iyz="-1.46337604915237E-06"
+        izz="4.11536949075924E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel2top"
+    type="continuous">
+    <origin
+      xyz="-0.126 -0.129 0.08824"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_wheel_2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="castor_wheel_2_wheel">
+    <inertial>
+      <origin
+        xyz="-1.38122846493616E-11 -2.1034017028132E-09 3.58349746725287E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.151688158408623" />
+      <inertia
+        ixx="7.2726674930244E-05"
+        ixy="-3.08329382306512E-10"
+        ixz="-1.85709610483703E-12"
+        iyy="4.52956309666694E-05"
+        iyz="2.57653617253462E-10"
+        izz="4.5253142930769E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_2_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_2_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel2wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.0215 -0.05365"
+      rpy="0 0 0" />
+    <parent
+      link="castor_wheel_2" />
+    <child
+      link="castor_wheel_2_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="castor_wheel_3">
+    <inertial>
+      <origin
+        xyz="-0.000420361795312657 0.00908123288506413 -0.0343111899499671"
+        rpy="0 0 0" />
+      <mass
+        value="0.0540669980927752" />
+      <inertia
+        ixx="1.78511368330048E-05"
+        ixy="-2.00632174983138E-09"
+        ixz="-1.11460786701919E-09"
+        iyy="3.91611994966721E-05"
+        iyz="1.4633762781936E-06"
+        izz="4.11536949075924E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel3top"
+    type="continuous">
+    <origin
+      xyz="0.126 0.13 0.08824"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_wheel_3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="castor_wheel_3_wheel">
+    <inertial>
+      <origin
+        xyz="-1.35968458714331E-11 -3.58350081691716E-07 -2.10333261658341E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.151688158405763" />
+      <inertia
+        ixx="7.27266749292407E-05"
+        ixy="1.85651169078717E-12"
+        ixz="-3.0832926164698E-10"
+        iyy="4.52531429303733E-05"
+        iyz="-2.57653815973351E-10"
+        izz="4.52956309653523E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_3_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_3_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel3wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.0215 -0.05365"
+      rpy="0 0 0" />
+    <parent
+      link="castor_wheel_3" />
+    <child
+      link="castor_wheel_3_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="castor_wheel_4">
+    <inertial>
+      <origin
+        xyz="-0.000420361795312657 0.00908123288506413 -0.0343111899499671"
+        rpy="0 0 0" />
+      <mass
+        value="0.0540669980927753" />
+      <inertia
+        ixx="1.78511368330048E-05"
+        ixy="-2.00632174981813E-09"
+        ixz="-1.11460786706816E-09"
+        iyy="3.91611994966723E-05"
+        iyz="1.46337627819361E-06"
+        izz="4.11536949075926E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel4top"
+    type="continuous">
+    <origin
+      xyz="-0.126 0.13 0.08824"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_wheel_4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="castor_wheel_4_wheel">
+    <inertial>
+      <origin
+        xyz="-1.36090583247039E-11 -3.58350073892399E-07 -2.10333425676446E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.151688158405829" />
+      <inertia
+        ixx="7.27266749292642E-05"
+        ixy="1.85652502616378E-12"
+        ixz="-3.08329264491447E-10"
+        iyy="4.52531429303824E-05"
+        iyz="-2.57653811217984E-10"
+        izz="4.52956309653829E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_4_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://apollo_2_0/meshes/castor_wheel_4_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castorwheel4wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.0215 -0.05365"
+      rpy="0 0 0" />
+    <parent
+      link="castor_wheel_4" />
+    <child
+      link="castor_wheel_4_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
