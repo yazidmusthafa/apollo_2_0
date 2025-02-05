@@ -247,7 +247,7 @@
     name="castorwheel1top"
     type="continuous">
     <origin
-      xyz="0.126 -0.129 0.08824"
+      xyz="0.126 -0.129 0.0852"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -255,6 +255,7 @@
       link="castor_wheel_1" />
     <axis
       xyz="0 0 -1" />
+    <dynamics damping="0.02" friction="0.02"/>
   </joint>
   <link
     name="castor_wheel_1_wheel">
@@ -353,7 +354,7 @@
     name="castorwheel2top"
     type="continuous">
     <origin
-      xyz="-0.126 -0.129 0.08824"
+      xyz="-0.126 -0.129 0.0852"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -361,6 +362,7 @@
       link="castor_wheel_2" />
     <axis
       xyz="0 0 -1" />
+    <dynamics damping="0.02" friction="0.02"/>
   </joint>
   <link
     name="castor_wheel_2_wheel">
@@ -459,7 +461,7 @@
     name="castorwheel3top"
     type="continuous">
     <origin
-      xyz="0.126 0.13 0.08824"
+      xyz="0.126 0.13 0.0852"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -467,6 +469,7 @@
       link="castor_wheel_3" />
     <axis
       xyz="0 0 1" />
+    <dynamics damping="0.02" friction="0.02"/>
   </joint>
   <link
     name="castor_wheel_3_wheel">
@@ -565,7 +568,7 @@
     name="castorwheel4top"
     type="continuous">
     <origin
-      xyz="-0.126 0.13 0.08824"
+      xyz="-0.126 0.13 0.0852"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -573,6 +576,7 @@
       link="castor_wheel_4" />
     <axis
       xyz="0 0 1" />
+    <dynamics damping="0.02" friction="0.02"/>
   </joint>
   <link
     name="castor_wheel_4_wheel">

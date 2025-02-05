@@ -15,7 +15,7 @@
 				<argument>--ros-args --remap /odom:=odom</argument>
 			</ros>
 			<!-- Plugin update rate in Hz -->
-			<update_rate>100</update_rate>
+			<update_rate>50</update_rate>
 			<num_wheel_pairs>1</num_wheel_pairs>
 
 			<left_joint>lw</left_joint>
@@ -70,8 +70,6 @@
 			<joint_name>castorwheel4wheel</joint_name>
 			<joint_name>fw</joint_name>
 		</plugin>
-
-
 	</gazebo>
 
 </robot>

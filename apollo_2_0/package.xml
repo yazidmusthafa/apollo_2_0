@@ -12,12 +12,15 @@
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
+  <depend>gazebo_ros_pkgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
-    <gazebo_ros gazebo_model_path = "/home/yazidmusthafa/apollo_ws/install/apollo_2_0/share"/>
+    <!-- <gazebo_ros gazebo_model_path = "/home/yazidmusthafa/apollo_ws/install/apollo_2_0/share"/>    do the next line instead of this -->
+    <gazebo_ros gazebo_model_path = "${prefix}/../"/>
+    <gazebo_ros plugin_path="${prefix}/lib" gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/models:${prefix}/fuel_models"/>
   </export>
 </package>
