@@ -50,7 +50,14 @@ def generate_launch_description():
         arguments=['-d', rviz_config_dir],
         parameters=[{'use_sim_time': use_sim_time}],
         output='screen'
-
+        )
+    
+    set_initial_robot_pose_node = Node(
+        package='apollo_2_0',
+        executable='initial_pose_publisher',
+        name='initial_pose_publisher',
+        parameters=[{'use_sim_time': use_sim_time}],
+        output='screen'
         )
 
     # Run the node
@@ -60,5 +67,6 @@ def generate_launch_description():
         spawn_apollo_robot,
         nav2_launch,
         rviz_node,
+        set_initial_robot_pose_node,
     ])
 
