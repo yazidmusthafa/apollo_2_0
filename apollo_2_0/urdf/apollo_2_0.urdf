@@ -255,7 +255,7 @@
     name="castorwheel1top"
     type="continuous">
     <origin
-      xyz="0.126 -0.129 0.0852"
+      xyz="0.126 -0.129 0.08516"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -362,7 +362,7 @@
     name="castorwheel2top"
     type="continuous">
     <origin
-      xyz="-0.126 -0.129 0.0852"
+      xyz="-0.126 -0.129 0.08516"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -469,7 +469,7 @@
     name="castorwheel3top"
     type="continuous">
     <origin
-      xyz="0.126 0.13 0.0852"
+      xyz="0.126 0.13 0.08516"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -576,7 +576,7 @@
     name="castorwheel4top"
     type="continuous">
     <origin
-      xyz="-0.126 0.13 0.0852"
+      xyz="-0.126 0.13 0.08516"
       rpy="0 0 0" />
     <parent
       link="base_link" />
