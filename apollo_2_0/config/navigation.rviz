@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /TF1/Frames1
         - /TF1/Tree1
+        - /MarkerArray1
       Splitter Ratio: 0.5833333134651184
     Tree Height: 462
   - Class: rviz_common/Selection
@@ -199,8 +200,8 @@ Visualization Manager:
                     {}
                 front_wheel:
                   {}
-              laser_frame:
-                {}
+                laser_frame:
+                  {}
               left_wheel:
                 {}
               right_wheel:
@@ -609,6 +610,18 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /waypoints
       Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: MPPI_Trajectories
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /trajectories
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -646,7 +659,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -3.1499998569488525
+      Angle: -3.1550002098083496
       Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -656,7 +669,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 86.22679901123047
+      Scale: 68.15534210205078
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz_default_plugins)
       X: -0.044467076659202576
